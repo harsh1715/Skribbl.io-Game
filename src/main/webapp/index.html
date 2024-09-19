@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat Server</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+
+<!-- Add your site or application content here -->
+<header class="border_title header">Draw.io Game<img src="images/chat_icon.png" alt="dash" class="headerimg"/></header>
+
+<div class="container">
+  <div class="nav">
+    <h3>&#10146; Dashboard<img src="images/dashboard.png" alt="dash" class="tinyimg"/></h3>
+    <a href="about.html">About<img src="images/info.png" alt="about" class="tinyimg"/></a>
+    <br>
+    <br>
+    <h3 class = "centeredListRooms">List of Chat Rooms</h3>
+    <div class = table-container>
+      <table id="room-table">
+        <thead>
+        <tr>
+          <th>Room</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <button class = newRoomButton id="reload" onclick="reload()">Reload</button>
+    <button class = newRoomButton id="newroom" onclick="newRoom()">Create A New Room</button>
+    <br>
+    <br>
+    <input type="text" id="room-code">
+    <br>
+    <button class = newRoomButton id="btRoom" onclick="enterRoomByCode()">Enter Room Code</button>
+  </div>
+
+
+  <div class="dashboard">
+    <section class="paintingcontainer">
+      <div id="toolbar">
+        <h1>Draw.</h1>
+        <button class="save">Save</button>
+        <label for="stroke">Stroke</label>
+        <input id="stroke" name='stroke' type="color">
+        <label >Background-Color</label>
+        <input type="color" id="favcolor" value="#FFFFFF">
+        <label for="lineWidth">Line Width</label>
+        <input id="lineWidth" name='lineWidth' type="number" value="5">
+        <label for="Eraser" class="checkbox-label">Eraser</label>
+        <input id="Eraser" name='Eraser' type="checkbox" class="checkbox-input">
+        <button id="clear">Clear</button>
+      </div>
+
+        <canvas id="myCanvas"></canvas>
+
+
+    </section>
+
+    <div  class="logclass">
+      <div id="log" ><h3>Hello Start Chatting Here:</h3> </div>
+      <div class="input-wrapper">
+        <input title="Chat Input" id="input" class="chat-input" type="text" autofocus />
+      </div>
+    </div>
+  </div>
+
+
+  <div class="performance">
+    <div class = table-container>
+      <table id="user-table">
+        <thead>
+        <tr>
+          <th>Users</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <div class = "leavebutton"> <button id="leave-button" class="joinRoomButton" onclick="leaveRoom()">Leave Room</button> </div>
+    <div class = "word-table">
+      <table id="random-items">
+        <thead>
+        <tr>
+          <th>Word</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <button class = "newRoomButton" id="things-button" onclick="word()">Generate Word</button>
+  </div>
+
+</div>
+
+
+
+<footer class="border_title footer">Copyright OTUGuys 2023</footer>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>
